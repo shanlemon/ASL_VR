@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.vrleaptest.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "D:\\Unity Projects\\VR Leap Test\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "VR Leap Test [Testing]"
+        }
+      }
+    }
+  ]
+}
