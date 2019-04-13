@@ -68,6 +68,8 @@ namespace Leap.Unity {
 		private int jointIndex = 0;
 		LineDrawer ld;
 
+		[SerializeField] private MyHandData handData;
+
 		private void Start() {
 			ld = new LineDrawer(.005f);
 		}
@@ -210,7 +212,7 @@ namespace Leap.Unity {
 
 
 			//Debug.Log(jointIndex + "  " + _spherePositions[jointIndex]);
-			Debug.Log(angBetJoints(0, 3));
+			//Debug.Log(angBetJoints(0, 3));
 
 			drawSpherePink(_spherePositions[jointIndex], .01f);
 			drawSpherePink(_hand.PalmPosition.ToVector3(), .025f);
@@ -223,6 +225,21 @@ namespace Leap.Unity {
 				}
 			}
 
+			float[] thumb = getFingerAngles(0, 1, 2, 3);
+			float[] index = getFingerAngles(4, 5, 6, 7);
+			float[] middle = getFingerAngles(8, 9, 10, 11);
+			float[] ring = getFingerAngles(12, 13, 14, 15);
+			float[] pinky = getFingerAngles(16, 17, 18, 19);
+
+			handData.data.SetVars(thumb, index, middle, ring, pinky);
+		}
+
+		private float[] getFingerAngles(int i1, int i2, int i3, int i4) {
+			float[] finger = new float[3];
+			finger[0] = angBetJoints(i1, i2);
+			finger[1] = angBetJoints(i2, i3);
+			finger[2] = angBetJoints(i3, i4);
+			return finger;
 		}
 
 		private float angBetJoints(int index1, int index2) {
