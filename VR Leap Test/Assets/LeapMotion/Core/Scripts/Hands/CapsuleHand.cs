@@ -225,6 +225,7 @@ namespace Leap.Unity {
 				}
 			}
 
+
 			float[] thumb = getFingerAngles(0, 1, 2, 3);
 			float[] index = getFingerAngles(4, 5, 6, 7);
 			float[] middle = getFingerAngles(8, 9, 10, 11);

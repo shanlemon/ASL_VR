@@ -23,8 +23,6 @@ public class MyHandData : MonoBehaviour {
 		}
 
 		//Debug.Log(WriteJSON.loadJSON("letterA").AllAngles[0]);
-
-		string closestLetter = "NaN";
 		List<GuessLetter> accuracies = new List<GuessLetter>();
 
 		char letter = 'A';
@@ -36,7 +34,7 @@ public class MyHandData : MonoBehaviour {
 			letter++;
 		}
 		accuracies.Sort((a, b) => a.accuracy.CompareTo(b.accuracy));
-		Debug.Log(accuracies[0].letter + " : " + accuracies[0].accuracy);
+		//Debug.Log(accuracies[0].letter + " : " + accuracies[0].accuracy);
 
 
 		//Debug.Log(gameObject.name + ": Thumb: " + data.thumb.knuckleSegment + " " + data.thumb.middleSegment + " " + data.thumb.endSegment);
