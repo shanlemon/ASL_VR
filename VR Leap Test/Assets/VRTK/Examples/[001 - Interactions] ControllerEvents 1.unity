@@ -2014,6 +2014,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 691453150}
+  - component: {fileID: 691453151}
   m_Layer: 0
   m_Name: LeftHandData
   m_TagString: Untagged
@@ -2035,6 +2036,56 @@ Transform:
   m_Father: {fileID: 2045746562}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &691453151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691453149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb12de51847ab244ea1ab782564a8df5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data:
+    thumb:
+      knuckleSegment: 0
+      middleSegment: 0
+      endSegment: 0
+    indexFinger:
+      knuckleSegment: 0
+      middleSegment: 0
+      endSegment: 0
+    middleFinger:
+      knuckleSegment: 0
+      middleSegment: 0
+      endSegment: 0
+    ringFinger:
+      knuckleSegment: 0
+      middleSegment: 0
+      endSegment: 0
+    littleFinger:
+      knuckleSegment: 0
+      middleSegment: 0
+      endSegment: 0
+    AllAngles:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    handAngle: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &697758761
 GameObject:
   m_ObjectHideFlags: 0
@@ -4779,6 +4830,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1387219997}
+  - component: {fileID: 1387219998}
   m_Layer: 0
   m_Name: RightHandData
   m_TagString: Untagged
@@ -4800,6 +4852,56 @@ Transform:
   m_Father: {fileID: 2045746562}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1387219998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387219996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb12de51847ab244ea1ab782564a8df5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data:
+    thumb:
+      knuckleSegment: 0
+      middleSegment: 0
+      endSegment: 0
+    indexFinger:
+      knuckleSegment: 0
+      middleSegment: 0
+      endSegment: 0
+    middleFinger:
+      knuckleSegment: 0
+      middleSegment: 0
+      endSegment: 0
+    ringFinger:
+      knuckleSegment: 0
+      middleSegment: 0
+      endSegment: 0
+    littleFinger:
+      knuckleSegment: 0
+      middleSegment: 0
+      endSegment: 0
+    AllAngles:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    handAngle: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1001 &1398896324
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6902,6 +7004,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2045746562}
+  - component: {fileID: 2045746563}
   m_Layer: 0
   m_Name: Hand Data
   m_TagString: Untagged
@@ -6925,6 +7028,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2045746563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045746561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8559ab50d20fa0a429c5bb4921f7436a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2062689431
 GameObject:
   m_ObjectHideFlags: 0
@@ -7136,10 +7251,20 @@ PrefabInstance:
       propertyPath: checkMat
       value: 
       objectReference: {fileID: 2100000, guid: 426dfea0bf853f84d95b5e8cbea7f912, type: 2}
+    - target: {fileID: 6545763413187342935, guid: 1eba1411dc1f0ee46b7c9fd93d853c38,
+        type: 3}
+      propertyPath: handData
+      value: 
+      objectReference: {fileID: 691453151}
     - target: {fileID: 6546397560436612171, guid: 1eba1411dc1f0ee46b7c9fd93d853c38,
         type: 3}
       propertyPath: checkMat
       value: 
       objectReference: {fileID: 2100000, guid: 426dfea0bf853f84d95b5e8cbea7f912, type: 2}
+    - target: {fileID: 6546397560436612171, guid: 1eba1411dc1f0ee46b7c9fd93d853c38,
+        type: 3}
+      propertyPath: handData
+      value: 
+      objectReference: {fileID: 1387219998}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1eba1411dc1f0ee46b7c9fd93d853c38, type: 3}

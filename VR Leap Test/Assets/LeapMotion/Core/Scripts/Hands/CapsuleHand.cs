@@ -231,7 +231,7 @@ namespace Leap.Unity {
 			float[] ring = getFingerAngles(12, 13, 14, 15);
 			float[] pinky = getFingerAngles(16, 17, 18, 19);
 
-			handData.data.SetVars(thumb, index, middle, ring, pinky);
+			handData.data.SetVars(thumb, index, middle, ring, pinky, Quaternion.identity);
 		}
 
 		private float[] getFingerAngles(int i1, int i2, int i3, int i4) {
