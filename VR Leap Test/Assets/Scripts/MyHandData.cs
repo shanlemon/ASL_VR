@@ -11,30 +11,29 @@ public class MyHandData : MonoBehaviour {
 
 	// Start is called before the first frame update
 	void Start() {
-		data = new HandData();
+		//data = new HandData();
 	}
 
 	// Update is called once per frame
 	void Update() {
 		//Debug.Log("Hand: " + gameObject.name);
-
 		if (Input.GetKeyDown(KeyCode.Space)) {
-			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterF"));
+			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterB"));
 		}
 
 		//Debug.Log(WriteJSON.loadJSON("letterA").AllAngles[0]);
 		List<GuessLetter> accuracies = new List<GuessLetter>();
 
-		char letter = 'A';
-		for (int i = 0; i < 6; i++) {
-			accuracies.Add(new GuessLetter(
-				Mathf.Abs(Accuracy(data, WriteJSON.loadJSON("Letter" + letter)) - 100f),
-				letter + ""));
+		string[] signals = new string[] { "ThumbsUp", "letterA", "letterB",
+			"letterC", "letterD", "letterE", "letterF","letterG","letterH"};
 
-			letter++;
+		for (int i = 0; i < signals.Length; i++) {
+			accuracies.Add(new GuessLetter(
+				Mathf.Abs(Accuracy(data, WriteJSON.loadJSON(signals[i])) - 100f),
+				signals[i]));
 		}
 		accuracies.Sort((a, b) => a.accuracy.CompareTo(b.accuracy));
-		//Debug.Log(accuracies[0].letter + " : " + accuracies[0].accuracy);
+		Debug.Log(accuracies[0].letter + " : " + accuracies[0].accuracy);
 
 
 		//Debug.Log(gameObject.name + ": Thumb: " + data.thumb.knuckleSegment + " " + data.thumb.middleSegment + " " + data.thumb.endSegment);
@@ -47,12 +46,12 @@ public class MyHandData : MonoBehaviour {
 	public static float Accuracy(HandData myHand, HandData signal) {
 		float sum = 0;
 
-		for (int i = 0; i < myHand.AllAngles.Length; i++) {
+		for (int i = 0; i < myHand.AllDistances.Length; i++) {
 			//Debug.Log(myHand.AllAngles[i] + " / " + signal.AllAngles[i]);
-			sum += myHand.AllAngles[i] / signal.AllAngles[i];
+			sum += myHand.AllDistances[i] / signal.AllDistances[i];
 		}
 
-		float avg = sum / myHand.AllAngles.Length;
+		float avg = sum / myHand.AllDistances.Length;
 
 		return avg * 100;
 	}

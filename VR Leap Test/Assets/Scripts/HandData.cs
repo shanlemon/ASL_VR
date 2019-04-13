@@ -1,80 +1,77 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 [System.Serializable]
 public class HandData {
 
-	public Finger thumb;
-	public Finger indexFinger;
-	public Finger middleFinger;
-	public Finger ringFinger;
-	public Finger littleFinger;
+	//public float ThumbToPalm;
+	//public float IndexToPalm;
+	//public float MiddleToPalm;
+	//public float RingToPalm;
+	//public float PinkyToPalm;
 
-	public float[] AllAngles;
+	//public float ThumbToIndex;
+	//public float IndexToMiddle;
+	//public float MiddleToRing;
+	//public float RingToPinky;
 
-	public Quaternion handAngle;
+	public float[] AllDistances;
 
-	public HandData() {
-		thumb = new Finger();
-		indexFinger = new Finger();
-		middleFinger = new Finger();
-		ringFinger = new Finger();
-		littleFinger = new Finger();
-		AllAngles = new float[15];
+	public HandData(Vector3[] HandPos) {
+
+		List<float> distances = new List<float>();
+
+		for (int i = 0; i < HandPos.Length - 1; i++) {
+			for (int j = i + 1; j < HandPos.Length; j++) {
+				distances.Add(Vector3.Distance(HandPos[i], HandPos[j]));
+			}
+		}
+
+		//ThumbToPalm = Vector3.Distance(thumb, palm);
+		//IndexToPalm = Vector3.Distance(indexF, palm);
+		//MiddleToPalm = Vector3.Distance(middleF, palm);
+		//RingToPalm = Vector3.Distance(ringF, palm);
+		//PinkyToPalm = Vector3.Distance(littleF, palm);
+		//ThumbToIndex = Vector3.Distance(thumb, indexF);
+		//IndexToMiddle = Vector3.Distance(indexF, middleF);
+		//MiddleToRing = Vector3.Distance(middleF, ringF);
+		//RingToPinky = Vector3.Distance(ringF, littleF);
+
+		//AllDistances = new float[] {ThumbToPalm, IndexToPalm,
+		//	MiddleToPalm, RingToPalm, PinkyToPalm,
+		//	ThumbToIndex,IndexToMiddle, MiddleToRing, RingToPinky
+		//};
+		AllDistances = distances.ToArray();
+
 	}
 
-	public HandData(float[] thumb, float[] indexF, float[] middleF, float[] ringF, float[] littleF, Quaternion handAngle) {
-		this.thumb = new Finger(thumb);
-		indexFinger = new Finger(indexF);
-		middleFinger = new Finger(middleF);
-		ringFinger = new Finger(ringF);
-		littleFinger = new Finger(littleF);
-		this.handAngle = handAngle;
+	public void SetVars(Vector3[] HandPos) {
 
-		AllAngles = new float[] {
-			thumb[0], thumb[1], thumb[2],
-			indexF[0], indexF[1], indexF[2],
-			middleF[0], middleF[1], middleF[2],
-			ringF[0], ringF[1], ringF[2],
-			littleF[0], littleF[1], littleF[2],
-		};
-		//Debug.Log(AllAngles[0] + "inside init");
-	}
+		List<float> distances = new List<float>();
 
-	public void SetVars(float[] thumb, float[] indexF, float[] middleF, float[] ringF, float[] littleF, Quaternion handAngle) {
-		this.thumb = new Finger(thumb);
-		indexFinger = new Finger(indexF);
-		middleFinger = new Finger(middleF);
-		ringFinger = new Finger(ringF);
-		littleFinger = new Finger(littleF);
-		this.handAngle = handAngle;
+		for (int i = 0; i < HandPos.Length - 1; i++) {
+			for (int j = i + 1; j < HandPos.Length; j++) {
+				distances.Add(Vector3.Distance(HandPos[i], HandPos[j]));
+			}
+		}
 
-		AllAngles = new float[] {
-			thumb[0], thumb[1], thumb[2],
-			indexF[0], indexF[1], indexF[2],
-			middleF[0], middleF[1], middleF[2],
-			ringF[0], ringF[1], ringF[2],
-			littleF[0], littleF[1], littleF[2],
-		};
-		//Debug.Log(AllAngles[0] + "inside sset");
+		//ThumbToPalm = Vector3.Distance(thumb, palm);
+		//IndexToPalm = Vector3.Distance(indexF, palm);
+		//MiddleToPalm = Vector3.Distance(middleF, palm);
+		//RingToPalm = Vector3.Distance(ringF, palm);
+		//PinkyToPalm = Vector3.Distance(littleF, palm);
+		//ThumbToIndex = Vector3.Distance(thumb, indexF);
+		//IndexToMiddle = Vector3.Distance(indexF, middleF);
+		//MiddleToRing = Vector3.Distance(middleF, ringF);
+		//RingToPinky = Vector3.Distance(ringF, littleF);
+
+		//AllDistances = new float[] {ThumbToPalm, IndexToPalm,
+		//	MiddleToPalm, RingToPalm, PinkyToPalm,
+		//	ThumbToIndex,IndexToMiddle, MiddleToRing, RingToPinky
+		//};
+
+		AllDistances = distances.ToArray();
+
 	}
 }
 
-[System.Serializable]
-public class Finger {
-	public float knuckleSegment;
-	public float middleSegment;
-	public float endSegment;
-
-	public Finger(float[] joints) {
-		knuckleSegment = joints[0];
-		middleSegment = joints[1];
-		endSegment = joints[2];
-	}
-
-	public Finger() {
-		knuckleSegment = 0f;
-		middleSegment = 0f;
-		endSegment = 0f;
-	}
-
-}

@@ -225,29 +225,9 @@ namespace Leap.Unity {
 				}
 			}
 
+			//handData.data.SetVars(_spherePositions[3], _spherePositions[7], _spherePositions[11], _spherePositions[15], _spherePositions[19], _hand.PalmPosition.ToVector3());
+			handData.data.SetVars(_spherePositions);
 
-			float[] thumb = getFingerAngles(0, 1, 2, 3);
-			float[] index = getFingerAngles(4, 5, 6, 7);
-			float[] middle = getFingerAngles(8, 9, 10, 11);
-			float[] ring = getFingerAngles(12, 13, 14, 15);
-			float[] pinky = getFingerAngles(16, 17, 18, 19);
-
-			handData.data.SetVars(thumb, index, middle, ring, pinky, Quaternion.identity);
-		}
-
-		private float[] getFingerAngles(int i1, int i2, int i3, int i4) {
-			float[] finger = new float[3];
-			finger[0] = angBetJoints(i1, i2);
-			finger[1] = angBetJoints(i2, i3);
-			finger[2] = angBetJoints(i3, i4);
-			return finger;
-		}
-
-		private float angBetJoints(int index1, int index2) {
-			//Debug.Log("Angle Between Position: " + _spherePositions[index1] + " and Position: " + );
-			Debug.DrawLine(_spherePositions[index1], _spherePositions[index2]);
-			ld.DrawLineInGameView(_spherePositions[index1], _spherePositions[index2], Color.yellow);
-			return Vector3.Angle(_spherePositions[index1], _spherePositions[index2]) * Mathf.Rad2Deg;
 		}
 
 		private void drawSphere(Vector3 position) {

@@ -28,9 +28,9 @@ public class WriteJSON : MonoBehaviour {
 
 	//}
 
-	private void Start() {
-		Debug.Log(loadJSON("letterA").AllAngles[0]);
-	}
+	//private void Start() {
+	//	Debug.Log(loadJSON("letterA").AllDistances[0]);
+	//}
 
 
 	public static string saveJSON(HandData data, string name) {
