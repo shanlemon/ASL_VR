@@ -2049,43 +2049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data:
-    thumb:
-      knuckleSegment: 0
-      middleSegment: 0
-      endSegment: 0
-    indexFinger:
-      knuckleSegment: 0
-      middleSegment: 0
-      endSegment: 0
-    middleFinger:
-      knuckleSegment: 0
-      middleSegment: 0
-      endSegment: 0
-    ringFinger:
-      knuckleSegment: 0
-      middleSegment: 0
-      endSegment: 0
-    littleFinger:
-      knuckleSegment: 0
-      middleSegment: 0
-      endSegment: 0
-    AllAngles:
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    handAngle: {x: 0, y: 0, z: 0, w: 0}
+    AllDistances: []
 --- !u!1 &697758761
 GameObject:
   m_ObjectHideFlags: 0
@@ -4865,43 +4829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data:
-    thumb:
-      knuckleSegment: 0
-      middleSegment: 0
-      endSegment: 0
-    indexFinger:
-      knuckleSegment: 0
-      middleSegment: 0
-      endSegment: 0
-    middleFinger:
-      knuckleSegment: 0
-      middleSegment: 0
-      endSegment: 0
-    ringFinger:
-      knuckleSegment: 0
-      middleSegment: 0
-      endSegment: 0
-    littleFinger:
-      knuckleSegment: 0
-      middleSegment: 0
-      endSegment: 0
-    AllAngles:
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    handAngle: {x: 0, y: 0, z: 0, w: 0}
+    AllDistances: []
 --- !u!1001 &1398896324
 PrefabInstance:
   m_ObjectHideFlags: 0

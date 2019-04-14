@@ -1,74 +1,39 @@
-﻿using System.Collections.Generic;
+﻿using Leap;
+using Leap.Unity;
+using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
 public class HandData {
 
-	//public float ThumbToPalm;
-	//public float IndexToPalm;
-	//public float MiddleToPalm;
-	//public float RingToPalm;
-	//public float PinkyToPalm;
+	public double[] AllDistances;
 
-	//public float ThumbToIndex;
-	//public float IndexToMiddle;
-	//public float MiddleToRing;
-	//public float RingToPinky;
+	public void SetVars(Vector3[] HandPos, Hand hand) {
 
-	public float[] AllDistances;
+		List<double> distances = new List<double>();
+		//List<float> angles = new List<float>();
 
-	public HandData(Vector3[] HandPos) {
-
-		List<float> distances = new List<float>();
+		Vector3 wristPos = hand.Arm.WristPosition.ToVector3();
 
 		for (int i = 0; i < HandPos.Length - 1; i++) {
 			for (int j = i + 1; j < HandPos.Length; j++) {
-				distances.Add(Vector3.Distance(HandPos[i], HandPos[j]));
+				distances.Add(System.Math.Round(Vector3.Distance(HandPos[i] - wristPos, HandPos[j] - wristPos), 3));
+				//distances.Add(Vector3.Angle(HandPos[i] - wristPos, HandPos[j] - wristPos));
 			}
 		}
 
-		//ThumbToPalm = Vector3.Distance(thumb, palm);
-		//IndexToPalm = Vector3.Distance(indexF, palm);
-		//MiddleToPalm = Vector3.Distance(middleF, palm);
-		//RingToPalm = Vector3.Distance(ringF, palm);
-		//PinkyToPalm = Vector3.Distance(littleF, palm);
-		//ThumbToIndex = Vector3.Distance(thumb, indexF);
-		//IndexToMiddle = Vector3.Distance(indexF, middleF);
-		//MiddleToRing = Vector3.Distance(middleF, ringF);
-		//RingToPinky = Vector3.Distance(ringF, littleF);
+		distances.Add(hand.Direction.ToVector3().x);
+		distances.Add(hand.Direction.ToVector3().y);
+		distances.Add(hand.Direction.ToVector3().z);
 
-		//AllDistances = new float[] {ThumbToPalm, IndexToPalm,
-		//	MiddleToPalm, RingToPalm, PinkyToPalm,
-		//	ThumbToIndex,IndexToMiddle, MiddleToRing, RingToPinky
-		//};
-		AllDistances = distances.ToArray();
 
-	}
 
-	public void SetVars(Vector3[] HandPos) {
-
-		List<float> distances = new List<float>();
-
-		for (int i = 0; i < HandPos.Length - 1; i++) {
-			for (int j = i + 1; j < HandPos.Length; j++) {
-				distances.Add(Vector3.Distance(HandPos[i], HandPos[j]));
-			}
-		}
-
-		//ThumbToPalm = Vector3.Distance(thumb, palm);
-		//IndexToPalm = Vector3.Distance(indexF, palm);
-		//MiddleToPalm = Vector3.Distance(middleF, palm);
-		//RingToPalm = Vector3.Distance(ringF, palm);
-		//PinkyToPalm = Vector3.Distance(littleF, palm);
-		//ThumbToIndex = Vector3.Distance(thumb, indexF);
-		//IndexToMiddle = Vector3.Distance(indexF, middleF);
-		//MiddleToRing = Vector3.Distance(middleF, ringF);
-		//RingToPinky = Vector3.Distance(ringF, littleF);
-
-		//AllDistances = new float[] {ThumbToPalm, IndexToPalm,
-		//	MiddleToPalm, RingToPalm, PinkyToPalm,
-		//	ThumbToIndex,IndexToMiddle, MiddleToRing, RingToPinky
-		//};
+		//foreach (Finger f in hand.Fingers) {
+		//	directions.Add(f.Direction.ToVector3().x);
+		//	directions.Add(f.Direction.ToVector3().y);
+		//	directions.Add(f.Direction.ToVector3().z);
+		//}
+		//AllDirections = directions.ToArray();
 
 		AllDistances = distances.ToArray();
 

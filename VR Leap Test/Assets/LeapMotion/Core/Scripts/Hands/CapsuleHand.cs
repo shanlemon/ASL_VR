@@ -63,7 +63,6 @@ namespace Leap.Unity {
 
 
 		//MY VARIABLES
-
 		[SerializeField] Material checkMat;
 		private int jointIndex = 0;
 		LineDrawer ld;
@@ -225,8 +224,9 @@ namespace Leap.Unity {
 				}
 			}
 
+			//Debug.Log(_spherePositions[0]);
 			//handData.data.SetVars(_spherePositions[3], _spherePositions[7], _spherePositions[11], _spherePositions[15], _spherePositions[19], _hand.PalmPosition.ToVector3());
-			handData.data.SetVars(_spherePositions);
+			handData.data.SetVars(_spherePositions, _hand);
 
 		}
 

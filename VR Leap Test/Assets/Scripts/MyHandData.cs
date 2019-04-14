@@ -9,31 +9,35 @@ public class MyHandData : MonoBehaviour {
 
 	public HandData data;
 
-	// Start is called before the first frame update
-	void Start() {
-		//data = new HandData();
+	private void Start() {
+		data = new HandData();
 	}
 
 	// Update is called once per frame
 	void Update() {
 		//Debug.Log("Hand: " + gameObject.name);
 		if (Input.GetKeyDown(KeyCode.Space)) {
+			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "ThumbsUp"));
+		}
+		if (Input.GetKeyDown(KeyCode.A)) {
+			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterA"));
+		}
+		if (Input.GetKeyDown(KeyCode.B)) {
 			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterB"));
 		}
-
-		//Debug.Log(WriteJSON.loadJSON("letterA").AllAngles[0]);
-		List<GuessLetter> accuracies = new List<GuessLetter>();
-
-		string[] signals = new string[] { "ThumbsUp", "letterA", "letterB",
-			"letterC", "letterD", "letterE", "letterF","letterG","letterH"};
-
-		for (int i = 0; i < signals.Length; i++) {
-			accuracies.Add(new GuessLetter(
-				Mathf.Abs(Accuracy(data, WriteJSON.loadJSON(signals[i])) - 100f),
-				signals[i]));
+		if (Input.GetKeyDown(KeyCode.C)) {
+			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterC"));
 		}
-		accuracies.Sort((a, b) => a.accuracy.CompareTo(b.accuracy));
-		Debug.Log(accuracies[0].letter + " : " + accuracies[0].accuracy);
+		if (Input.GetKeyDown(KeyCode.D)) {
+			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterD"));
+		}
+		if (Input.GetKeyDown(KeyCode.E)) {
+			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterE"));
+		}
+
+
+
+		GetAccuracies();
 
 
 		//Debug.Log(gameObject.name + ": Thumb: " + data.thumb.knuckleSegment + " " + data.thumb.middleSegment + " " + data.thumb.endSegment);
@@ -43,26 +47,54 @@ public class MyHandData : MonoBehaviour {
 		//Debug.Log("Pinky: " + data.littleFinger.knuckleSegment + " " + data.littleFinger.middleSegment + " " + data.littleFinger.endSegment);
 	}
 
-	public static float Accuracy(HandData myHand, HandData signal) {
-		float sum = 0;
+	private void GetAccuracies() {
+		//Debug.Log(WriteJSON.loadJSON("letterA").AllAngles[0]);
+		List<GuessLetter> accuracies = new List<GuessLetter>();
+
+		string[] signals = new string[] { "ThumbsUp", "letterA", "letterB",
+			"letterC", "letterD", "letterE"};
+
+		for (int i = 0; i < signals.Length; i++) {
+			accuracies.Add(new GuessLetter(
+				Mathf.Abs((float)Accuracy(data, WriteJSON.loadJSON(signals[i])) - 100),
+				signals[i]));
+		}
+
+
+		accuracies.Sort((a, b) => a.accuracy.CompareTo(b.accuracy));
+		Debug.Log(gameObject.name + " " + accuracies[0].letter + " : " + accuracies[0].accuracy);
+	}
+
+	public static double Accuracy(HandData myHand, HandData signal) {
+		double sum1 = 0;
 
 		for (int i = 0; i < myHand.AllDistances.Length; i++) {
 			//Debug.Log(myHand.AllAngles[i] + " / " + signal.AllAngles[i]);
-			sum += myHand.AllDistances[i] / signal.AllDistances[i];
+			sum1 += myHand.AllDistances[i] / signal.AllDistances[i];
 		}
 
-		float avg = sum / myHand.AllDistances.Length;
+		double avg1 = sum1 / myHand.AllDistances.Length;
 
-		return avg * 100;
+		//float sum2 = 0;
+
+		//for (int i = 0; i < myHand.AllDirections.Length; i++) {
+		//	//Debug.Log(myHand.AllAngles[i] + " / " + signal.AllAngles[i]);
+		//	sum2 += myHand.AllDirections[i] /
+		//		signal.AllDirections[i];
+		//}
+
+		//float avg2 = sum2 / myHand.AllDirections.Length;
+
+		return avg1 * 100;
 	}
 }
 
 
 public class GuessLetter {
-	public float accuracy;
+	public double accuracy;
 	public string letter;
 
-	public GuessLetter(float accuracy, string letter) {
+	public GuessLetter(double accuracy, string letter) {
 		this.accuracy = accuracy;
 		this.letter = letter;
 	}
