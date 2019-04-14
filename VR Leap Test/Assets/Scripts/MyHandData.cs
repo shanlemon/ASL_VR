@@ -22,89 +22,92 @@ public class MyHandData : MonoBehaviour {
 			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "ThumbsUp"));
 		}
 		if (Input.GetKeyDown(KeyCode.A)) {
-			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterA"));
+			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "A"));
 		}
 		if (Input.GetKeyDown(KeyCode.B)) {
-			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterB"));
+			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "B"));
 		}
 		if (Input.GetKeyDown(KeyCode.C)) {
-			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterC"));
+			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "C"));
 		}
 		if (Input.GetKeyDown(KeyCode.D)) {
-			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterD"));
+			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "D"));
 		}
 		if (Input.GetKeyDown(KeyCode.E)) {
-			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterE"));
+			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "E"));
 		}
 		if (Input.GetKeyDown(KeyCode.F)) {
-			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterF"));
+			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "F"));
 		}
 		if (Input.GetKeyDown(KeyCode.G)) {
-			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterG"));
+			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "G"));
 		}
 		if (Input.GetKeyDown(KeyCode.H)) {
-			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterH"));
+			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "H"));
 		}
 		if (Input.GetKeyDown(KeyCode.I)) {
-			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterI"));
+			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "I"));
 		}
-		if (Input.GetKeyDown(KeyCode.J)) {
-			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterJ"));
-		}
-		if (Input.GetKeyDown(KeyCode.K)) {
-			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterK"));
-		}
-		if (Input.GetKeyDown(KeyCode.L)) {
-			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterL"));
-		}
-		if (Input.GetKeyDown(KeyCode.M)) {
-			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterM"));
-		}
-		if (Input.GetKeyDown(KeyCode.N)) {
-			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterN"));
-		}
-		if (Input.GetKeyDown(KeyCode.O)) {
-			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterO"));
-		}
-		if (Input.GetKeyDown(KeyCode.P)) {
-			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterP"));
-		}
-		if (Input.GetKeyDown(KeyCode.Q)) {
-			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterQ"));
-		}
-		if (Input.GetKeyDown(KeyCode.R)) {
-			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterR"));
-		}
-		if (Input.GetKeyDown(KeyCode.S)) {
-			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterS"));
-		}
-		if (Input.GetKeyDown(KeyCode.T)) {
-			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterT"));
-		}
-		if (Input.GetKeyDown(KeyCode.U)) {
-			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterU"));
-		}
-		if (Input.GetKeyDown(KeyCode.V)) {
-			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterV"));
-		}
-		if (Input.GetKeyDown(KeyCode.W)) {
-			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterW"));
-		}
-		if (Input.GetKeyDown(KeyCode.X)) {
-			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterX"));
-		}
-		if (Input.GetKeyDown(KeyCode.Y)) {
-			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterY"));
-		}
-		if (Input.GetKeyDown(KeyCode.Z)) {
-			Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterZ"));
-		}
+		//if (Input.GetKeyDown(KeyCode.J)) {
+		//	Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "J"));
+		//}
+		//if (Input.GetKeyDown(KeyCode.K)) {
+		//	Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterK"));
+		//}
+		//if (Input.GetKeyDown(KeyCode.L)) {
+		//	Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterL"));
+		//}
+		//if (Input.GetKeyDown(KeyCode.M)) {
+		//	Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterM"));
+		//}
+		//if (Input.GetKeyDown(KeyCode.N)) {
+		//	Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterN"));
+		//}
+		//if (Input.GetKeyDown(KeyCode.O)) {
+		//	Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterO"));
+		//}
+		//if (Input.GetKeyDown(KeyCode.P)) {
+		//	Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterP"));
+		//}
+		//if (Input.GetKeyDown(KeyCode.Q)) {
+		//	Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterQ"));
+		//}
+		//if (Input.GetKeyDown(KeyCode.R)) {
+		//	Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterR"));
+		//}
+		//if (Input.GetKeyDown(KeyCode.S)) {
+		//	Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterS"));
+		//}
+		//if (Input.GetKeyDown(KeyCode.T)) {
+		//	Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterT"));
+		//}
+		//if (Input.GetKeyDown(KeyCode.U)) {
+		//	Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterU"));
+		//}
+		//if (Input.GetKeyDown(KeyCode.V)) {
+		//	Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterV"));
+		//}
+		//if (Input.GetKeyDown(KeyCode.W)) {
+		//	Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterW"));
+		//}
+		//if (Input.GetKeyDown(KeyCode.X)) {
+		//	Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterX"));
+		//}
+		//if (Input.GetKeyDown(KeyCode.Y)) {
+		//	Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterY"));
+		//}
+		//if (Input.GetKeyDown(KeyCode.Z)) {
+		//	Debug.Log("Saved Hand: " + WriteJSON.saveJSON(data, "letterZ"));
+		//}
 
-
-		if (letterGuess != null)
-			letterGuess.text = GetAccuracies().letter.Substring(GetAccuracies().letter.Length - 1);
-		else
+		if (letterGuess != null) {
+			if (!data.active) {
+				letterGuess.text = "";
+			} else
+				letterGuess.text = GetAccuracies().letter;
+		} else
 			GetAccuracies();
+
 		//Debug.Log(gameObject.name + ": Thumb: " + data.thumb.knuckleSegment + " " + data.thumb.middleSegment + " " + data.thumb.endSegment);
 		//Debug.Log("Index: " + data.indexFinger.knuckleSegment + " " + data.indexFinger.middleSegment + " " + data.indexFinger.endSegment);
 		//Debug.Log("Middle: " + data.middleFinger.knuckleSegment + " " + data.middleFinger.middleSegment + " " + data.middleFinger.endSegment);
@@ -116,8 +119,8 @@ public class MyHandData : MonoBehaviour {
 		//Debug.Log(WriteJSON.loadJSON("letterA").AllAngles[0]);
 		List<GuessLetter> accuracies = new List<GuessLetter>();
 
-		string[] signals = new string[] { "ThumbsUp", "letterA", "letterB",
-			"letterC", "letterD", "letterE","letterF","letterG","letterH","letterI"};
+		string[] signals = new string[] { "ThumbsUp", "A", "B",
+			"C", "D", "E","F","G","H","I"};
 
 		for (int i = 0; i < signals.Length; i++) {
 			accuracies.Add(new GuessLetter(

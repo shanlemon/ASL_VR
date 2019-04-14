@@ -1,0 +1,227 @@
+fileFormatVersion: 2
+guid: e595321b734afaa499c58faf3e65f054
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: BezierCurve
+    100002: BezierCurve_001
+    100004: bulb
+    100006: Circle_000
+    100008: Circle_001
+    100010: Circle_002
+    100012: Circle_003
+    100014: Circle_004
+    100016: Circle_006
+    100018: coil
+    100020: Cube
+    100022: Cylinder932_000
+    100024: Cylinder932_001
+    100026: Cylinder935_000
+    100028: Cylinder935_001
+    100030: Cylinder938_000
+    100032: Cylinder938_001
+    100034: Cylinder939_000
+    100036: Cylinder939_001
+    100038: Cylinder941_000
+    100040: Cylinder941_001
+    100042: filaments
+    100044: //RootNode
+    100046: obelisk
+    100048: Plane
+    100050: threads
+    400000: BezierCurve
+    400002: BezierCurve_001
+    400004: bulb
+    400006: Circle_000
+    400008: Circle_001
+    400010: Circle_002
+    400012: Circle_003
+    400014: Circle_004
+    400016: Circle_006
+    400018: coil
+    400020: Cube
+    400022: Cylinder932_000
+    400024: Cylinder932_001
+    400026: Cylinder935_000
+    400028: Cylinder935_001
+    400030: Cylinder938_000
+    400032: Cylinder938_001
+    400034: Cylinder939_000
+    400036: Cylinder939_001
+    400038: Cylinder941_000
+    400040: Cylinder941_001
+    400042: filaments
+    400044: //RootNode
+    400046: obelisk
+    400048: Plane
+    400050: threads
+    2100000: ceilingLamp_metal
+    2100002: ceilingLamp_BlackPlastic
+    2100004: ceilingLamp_whitePlastic
+    2100006: ceilingLamp_bulb
+    2100008: ceilingLamp_bulb__LUX_png
+    2100010: ceillingLamp_glass
+    2100012: ceillingLamp_light
+    2300000: BezierCurve
+    2300002: BezierCurve_001
+    2300004: bulb
+    2300006: Circle_000
+    2300008: Circle_001
+    2300010: Circle_002
+    2300012: Circle_003
+    2300014: Circle_004
+    2300016: Circle_006
+    2300018: coil
+    2300020: Cube
+    2300022: Cylinder932_000
+    2300024: Cylinder932_001
+    2300026: Cylinder935_000
+    2300028: Cylinder935_001
+    2300030: Cylinder938_000
+    2300032: Cylinder938_001
+    2300034: Cylinder939_000
+    2300036: Cylinder939_001
+    2300038: Cylinder941_000
+    2300040: Cylinder941_001
+    2300042: filaments
+    2300044: obelisk
+    2300046: Plane
+    2300048: threads
+    3300000: BezierCurve
+    3300002: BezierCurve_001
+    3300004: bulb
+    3300006: Circle_000
+    3300008: Circle_001
+    3300010: Circle_002
+    3300012: Circle_003
+    3300014: Circle_004
+    3300016: Circle_006
+    3300018: coil
+    3300020: Cube
+    3300022: Cylinder932_000
+    3300024: Cylinder932_001
+    3300026: Cylinder935_000
+    3300028: Cylinder935_001
+    3300030: Cylinder938_000
+    3300032: Cylinder938_001
+    3300034: Cylinder939_000
+    3300036: Cylinder939_001
+    3300038: Cylinder941_000
+    3300040: Cylinder941_001
+    3300042: filaments
+    3300044: obelisk
+    3300046: Plane
+    3300048: threads
+    4300000: Circle_004
+    4300002: Circle_001
+    4300004: Circle_003
+    4300006: Circle_002
+    4300008: BezierCurve_001
+    4300010: BezierCurve
+    4300012: Cube
+    4300014: bulb
+    4300016: coil
+    4300018: threads
+    4300020: filaments
+    4300022: obelisk
+    4300024: Cylinder941_001
+    4300026: Cylinder939_001
+    4300028: Cylinder938_001
+    4300030: Cylinder935_001
+    4300032: Cylinder932_001
+    4300034: Circle_000
+    4300036: Plane
+    4300038: Circle_006
+    4300040: Cylinder932_000
+    4300042: Cylinder935_000
+    4300044: Cylinder938_000
+    4300046: Cylinder939_000
+    4300048: Cylinder941_000
+    7400000: Default Take
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

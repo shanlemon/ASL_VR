@@ -22,14 +22,25 @@ public class LetterHold : MonoBehaviour {
 	void Update() {
 		currentLetter = text.text;
 
-		if (currentLetter.Equals(previousLetter)) {
+		if (currentLetter.Equals(previousLetter) && image.fillAmount <= 1 && !currentLetter.Equals("")) {
 			image.fillAmount += Time.deltaTime * speed;
 		} else
-			image.fillAmount = 00;
+			image.fillAmount = 0;
+
+		if (image.fillAmount >= 1) {
+			SignManager.INSTANCE.add(currentLetter);
+			Debug.Log(currentLetter + " pressed");
+			image.fillAmount = 0;
+		}
+
 		//if (image.fillAmount > 0) {
 		//	image.fillAmount -= Time.deltaTime * speed;
 		//}
 
 		previousLetter = text.text;
+	}
+
+	private void clearLetter() {
+		currentLetter = "";
 	}
 }

@@ -256,6 +256,14 @@ namespace Leap.Unity {
 
 		}
 
+		private void OnDisable() {
+			handData.data.setActive(false);
+		}
+
+		private void OnEnable() {
+			handData.data.setActive(true);
+		}
+
 		private void drawSphere(Vector3 position) {
 			drawSphere(position, _jointRadius);
 		}

@@ -7,6 +7,11 @@ using UnityEngine;
 public class HandData {
 
 	public double[] AllDistances;
+	public bool active = false;
+
+	public void setActive(bool value) {
+		active = value;
+	}
 
 	public void SetVars(Vector3[] HandPos, Hand hand) {
 
