@@ -47,7 +47,7 @@ public class MyHandData : MonoBehaviour {
 		//Debug.Log("Pinky: " + data.littleFinger.knuckleSegment + " " + data.littleFinger.middleSegment + " " + data.littleFinger.endSegment);
 	}
 
-	private void GetAccuracies() {
+	public GuessLetter GetAccuracies() {
 		//Debug.Log(WriteJSON.loadJSON("letterA").AllAngles[0]);
 		List<GuessLetter> accuracies = new List<GuessLetter>();
 
@@ -63,6 +63,7 @@ public class MyHandData : MonoBehaviour {
 
 		accuracies.Sort((a, b) => a.accuracy.CompareTo(b.accuracy));
 		Debug.Log(gameObject.name + " " + accuracies[0].letter + " : " + accuracies[0].accuracy);
+		return accuracies[0];
 	}
 
 	public static double Accuracy(HandData myHand, HandData signal) {
