@@ -18,7 +18,7 @@ public class HandData {
 		for (int i = 0; i < HandPos.Length - 1; i++) {
 			for (int j = i + 1; j < HandPos.Length; j++) {
 				distances.Add(System.Math.Round(Vector3.Distance(HandPos[i] - wristPos, HandPos[j] - wristPos), 3));
-				//distances.Add(Vector3.Angle(HandPos[i] - wristPos, HandPos[j] - wristPos));
+				distances.Add(Vector3.Angle(HandPos[i] - wristPos, HandPos[j] - wristPos));
 			}
 		}
 

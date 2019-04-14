@@ -66,6 +66,7 @@ namespace Leap.Unity {
 		[SerializeField] Material checkMat;
 		private int jointIndex = 0;
 		LineDrawer ld;
+		int index = 0;
 
 		[SerializeField] private MyHandData handData;
 
@@ -213,20 +214,45 @@ namespace Leap.Unity {
 			//Debug.Log(jointIndex + "  " + _spherePositions[jointIndex]);
 			//Debug.Log(angBetJoints(0, 3));
 
-			drawSpherePink(_spherePositions[jointIndex], .01f);
-			drawSpherePink(_hand.PalmPosition.ToVector3(), .025f);
+			//drawSpherePink(_spherePositions[jointIndex], .01f);
+			//drawSpherePink(_hand.PalmPosition.ToVector3(), .025f);
 
 
-			if (Input.GetKeyDown(KeyCode.Space)) {
-				jointIndex++;
-				if (jointIndex > TOTAL_JOINT_COUNT - 1) {
-					jointIndex = 0;
-				}
-			}
+			//if (Input.GetKeyDown(KeyCode.Space)) {
+			//	jointIndex++;
+			//	if (jointIndex > TOTAL_JOINT_COUNT - 1) {
+			//		jointIndex = 0;
+			//	}
+			//}
 
 			//Debug.Log(_spherePositions[0]);
 			//handData.data.SetVars(_spherePositions[3], _spherePositions[7], _spherePositions[11], _spherePositions[15], _spherePositions[19], _hand.PalmPosition.ToVector3());
 			handData.data.SetVars(_spherePositions, _hand);
+
+
+			//switch (index) {
+			//	case 0:
+			//		Debug.Log("Index: " + _hand.GetIndex().IsExtended);
+			//		break;
+			//	case 1:
+			//		Debug.Log("Thumb: " + _hand.GetThumb().IsExtended);
+			//		break;
+			//	case 2:
+			//		Debug.Log("Middle: " + _hand.GetMiddle().IsExtended);
+			//		break;
+			//	case 3:
+			//		Debug.Log("Ring: " + _hand.GetRing().IsExtended);
+			//		break;
+			//	case 4:
+			//		Debug.Log("Pinky: " + _hand.GetPinky().IsExtended);
+			//		break;
+			//	default:
+			//		break;
+			//}
+			//if (Input.GetKeyDown(KeyCode.RightArrow)) {
+			//	index++;
+			//	if (index > 4) { index = 0; }
+			//}
 
 		}
 
