@@ -65,13 +65,13 @@ namespace Leap.Unity {
 		//MY VARIABLES
 		[SerializeField] Material checkMat;
 		private int jointIndex = 0;
-		LineDrawer ld;
+		//LineDrawer ld;
 		int index = 0;
 
 		[SerializeField] private MyHandData handData;
 
 		private void Start() {
-			ld = new LineDrawer(.005f);
+			//ld = new LineDrawer(.005f);
 		}
 
 		public override ModelType HandModelType {
