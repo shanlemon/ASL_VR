@@ -35,13 +35,13 @@ public class WriteJSON : MonoBehaviour {
 
 	public static string saveJSON(HandData data, string name) {
 		string s = JsonUtility.ToJson(data);
-		string filePath = Application.dataPath + "/" + name + ".json";
+		string filePath = "C:\\Users\\Shan's Laptop\\Desktop\\KC 2018-2019\\KleinHacks2019\\Data\\" + name + ".json";
 		File.WriteAllText(filePath, s);
 		return s;
 	}
 
 	public static HandData loadJSON(string name) {
-		string filePath = Application.dataPath + "/" + name + ".json";
+		string filePath = "C:\\Users\\Shan's Laptop\\Desktop\\KC 2018-2019\\KleinHacks2019\\Data\\" + name + ".json";
 		string data = File.ReadAllText(filePath);
 		//Debug.Log(data);
 		HandData newData = JsonUtility.FromJson<HandData>(data);
